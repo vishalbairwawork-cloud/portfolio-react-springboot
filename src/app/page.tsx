@@ -1,4 +1,5 @@
 import FadeIn from "@/components/ui/FadeIn";
+import AnimatedToolset from "@/components/ui/AnimatedToolset";
 import { ArrowRight, Briefcase, FileText, LineChart, Target, Users } from "lucide-react";
 import Link from "next/link";
 
@@ -191,44 +192,7 @@ export default function Home() {
             <p className="text-foreground/60 mt-4 max-w-xl mx-auto">Technologies and frameworks I use to bridge strategy with execution.</p>
           </div>
         </FadeIn>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-          <FadeIn delay={0.1}>
-            <div className="bg-background border border-foreground/5 rounded-3xl p-8 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-lg mb-6 border-b border-foreground/5 pb-4">Product & Strategy</h4>
-              <ul className="space-y-3 text-foreground/70 text-sm">
-                <li>Roadmapping</li>
-                <li>User Stories & PRDs</li>
-                <li>Competitive Analysis</li>
-                <li>A/B Testing</li>
-                <li>Design Thinking</li>
-              </ul>
-            </div>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <div className="bg-background border border-foreground/5 rounded-3xl p-8 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-lg mb-6 border-b border-foreground/5 pb-4">Data & Analytics</h4>
-              <ul className="space-y-3 text-foreground/70 text-sm">
-                <li>SQL (Oracle SQL)</li>
-                <li>KPI Tracking</li>
-                <li>Funnel Analysis</li>
-                <li>Mixpanel</li>
-                <li>Google Search Console</li>
-              </ul>
-            </div>
-          </FadeIn>
-          <FadeIn delay={0.3}>
-            <div className="bg-background border border-foreground/5 rounded-3xl p-8 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-lg mb-6 border-b border-foreground/5 pb-4">Cloud & Tech</h4>
-              <ul className="space-y-3 text-foreground/70 text-sm">
-                <li>REST APIs & OAuth 2.0</li>
-                <li>Oracle Cloud (OCI)</li>
-                <li>CI/CD Pipelines</li>
-                <li>Jira & Confluence</li>
-                <li>Azure DevOps & GitLab</li>
-              </ul>
-            </div>
-          </FadeIn>
-        </div>
+        <AnimatedToolset />
       </section>
 
       {/* CONTACT CTA */}
