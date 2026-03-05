@@ -215,7 +215,7 @@ export default function Home() {
               Email Me
             </a>
             <a
-              href="https://linkedin.com/in/vishal-bairwa"
+              href="https://www.linkedin.com/in/vishal-bairwa/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-foreground/5 hover:bg-foreground/10 text-foreground px-8 py-4 rounded-2xl font-bold transition-colors"
@@ -223,7 +223,9 @@ export default function Home() {
               LinkedIn
             </a>
             <a
-              href="#"
+              href="https://medium.com/@vishalbairwa"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-foreground/5 hover:bg-foreground/10 text-foreground px-8 py-4 rounded-2xl font-bold transition-colors"
             >
               Medium

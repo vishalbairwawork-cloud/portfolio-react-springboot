@@ -58,7 +58,7 @@ export default function Header() {
                     <a href="https://linkedin.com/in/vishal-bairwa" target="_blank" rel="noreferrer" className="text-foreground/70 hover:text-blue-600 transition-colors" aria-label="LinkedIn">
                         <Linkedin className="w-5 h-5" />
                     </a>
-                    <a href="#" target="_blank" rel="noreferrer" className="text-foreground/70 hover:text-foreground transition-colors" aria-label="Medium">
+                    <a href="https://medium.com/@vishalbairwa" target="_blank" rel="noreferrer" className="text-foreground/70 hover:text-foreground transition-colors" aria-label="Medium">
                         <MediumIcon className="w-5 h-5" />
                     </a>
                     <a href="/Vishal_Bairwa_Product.pdf" target="_blank" rel="noreferrer" className="ml-2 px-4 py-2 rounded-full border border-blue-500/30 text-blue-500 hover:bg-blue-500/10 hover:text-blue-600 transition-colors font-bold text-xs uppercase tracking-wider">
