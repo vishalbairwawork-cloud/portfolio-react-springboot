@@ -5,6 +5,13 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { Linkedin } from "lucide-react";
+
+const MediumIcon = ({ className }: { className?: string }) => (
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+    </svg>
+);
 
 // Utility for merging tailwind classes safely
 export function cn(...inputs: ClassValue[]) {
@@ -36,7 +43,7 @@ export default function Header() {
                 Vishal Bairwa<span className="text-blue-500">.</span>
             </Link>
 
-            <nav className="hidden md:flex gap-8 text-sm font-medium text-foreground/70">
+            <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/70">
                 <Link href="#experience" className="hover:text-foreground transition-colors">
                     Experience
                 </Link>
@@ -46,9 +53,18 @@ export default function Header() {
                 <Link href="#contact" className="hover:text-foreground transition-colors">
                     Contact
                 </Link>
-                <a href="/Vishal_Bairwa_Product.pdf" target="_blank" rel="noreferrer" className="text-blue-500 hover:text-blue-600 transition-colors font-bold">
-                    Resume
-                </a>
+
+                <div className="flex items-center gap-4 ml-4 pl-4 border-l border-foreground/10">
+                    <a href="https://linkedin.com/in/vishal-bairwa" target="_blank" rel="noreferrer" className="text-foreground/70 hover:text-blue-600 transition-colors" aria-label="LinkedIn">
+                        <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" className="text-foreground/70 hover:text-foreground transition-colors" aria-label="Medium">
+                        <MediumIcon className="w-5 h-5" />
+                    </a>
+                    <a href="/Vishal_Bairwa_Product.pdf" target="_blank" rel="noreferrer" className="ml-2 px-4 py-2 rounded-full border border-blue-500/30 text-blue-500 hover:bg-blue-500/10 hover:text-blue-600 transition-colors font-bold text-xs uppercase tracking-wider">
+                        Resume
+                    </a>
+                </div>
             </nav>
         </motion.header>
     );
