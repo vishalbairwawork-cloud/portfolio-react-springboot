@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import {
-    Map, Lightbulb, Target, GitBranch, Layers, // Product
+    Map, Lightbulb, Target, GitBranch, Layers, Figma, // Product
     Database, LineChart, Filter, PieChart, Search, // Data
     Cloud, Server, Infinity, Layout, Github // Tech
 } from "lucide-react";
@@ -13,6 +13,7 @@ const tools = [
         items: [
             { name: "Roadmapping", icon: Map, color: "text-blue-500", bg: "bg-blue-500/10" },
             { name: "User Stories & PRDs", icon: Layers, color: "text-indigo-500", bg: "bg-indigo-500/10" },
+            { name: "Figma & Design", icon: Figma, color: "text-pink-500", bg: "bg-pink-500/10" },
             { name: "Competitive Analysis", icon: Target, color: "text-rose-500", bg: "bg-rose-500/10" },
             { name: "A/B Testing", icon: GitBranch, color: "text-purple-500", bg: "bg-purple-500/10" },
             { name: "Design Thinking", icon: Lightbulb, color: "text-amber-500", bg: "bg-amber-500/10" },

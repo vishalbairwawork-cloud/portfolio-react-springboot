@@ -14,7 +14,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            Transitioning to Associate Product Manager
+            Transitioning to Associate Product Manager/Product Analyst
           </div>
         </FadeIn>
 
@@ -27,7 +27,7 @@ export default function Home() {
 
         <FadeIn delay={0.3}>
           <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mb-8 mt-4 leading-relaxed tracking-wide">
-            Former Consulting Analyst at Deloitte & Co-founder at EduShots. Proven track record of scaling platforms, optimizing enterprise workflows, and bridging business strategy with technical execution.
+            Consulting Analyst at Deloitte & Co-founder at EduShots. Proven track record of scaling platforms, optimizing enterprise workflows, and bridging business strategy with technical execution.
           </p>
         </FadeIn>
 

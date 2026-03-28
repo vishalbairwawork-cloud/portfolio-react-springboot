@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { Linkedin } from "lucide-react";
@@ -55,7 +56,8 @@ export default function Header() {
                 </Link>
 
                 <div className="flex items-center gap-4 ml-4 pl-4 border-l border-foreground/10">
-                    <a href="https://linkedin.com/in/vishal-bairwa" target="_blank" rel="noreferrer" className="text-foreground/70 hover:text-blue-600 transition-colors" aria-label="LinkedIn">
+                    <ThemeToggle />
+                    <a href="https://www.linkedin.com/in/vishal-bairwa/" target="_blank" rel="noreferrer" className="text-foreground/70 hover:text-blue-600 transition-colors" aria-label="LinkedIn">
                         <Linkedin className="w-5 h-5" />
                     </a>
                     <a href="https://medium.com/@vishalbairwa" target="_blank" rel="noreferrer" className="text-foreground/70 hover:text-foreground transition-colors" aria-label="Medium">

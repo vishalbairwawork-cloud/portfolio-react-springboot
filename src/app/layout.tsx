@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 import Header from "@/components/ui/Header";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Vishal Bairwa | Product Manager & Digital Strategist",
@@ -25,14 +26,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground transition-colors duration-300`}
       >
-        <Header />
-        <main className="flex flex-col min-h-screen pt-24">
-          {children}
-        </main>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Header />
+          <main className="flex flex-col min-h-screen pt-24">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
