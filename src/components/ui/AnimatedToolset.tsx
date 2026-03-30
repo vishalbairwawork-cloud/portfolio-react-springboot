@@ -13,7 +13,7 @@ const tools = [
         items: [
             { name: "Roadmapping", icon: Map, color: "text-blue-500", bg: "bg-blue-500/10" },
             { name: "User Stories & PRDs", icon: Layers, color: "text-indigo-500", bg: "bg-indigo-500/10" },
-            { name: "Figma & Design", icon: Figma, color: "text-pink-500", bg: "bg-pink-500/10" },
+            { name: "Figma & Design", img: "https://skillicons.dev/icons?i=figma", color: "text-pink-500", bg: "bg-pink-500/10" },
             { name: "Competitive Analysis", icon: Target, color: "text-rose-500", bg: "bg-rose-500/10" },
             { name: "A/B Testing", icon: GitBranch, color: "text-purple-500", bg: "bg-purple-500/10" },
             { name: "Design Thinking", icon: Lightbulb, color: "text-amber-500", bg: "bg-amber-500/10" },
@@ -22,10 +22,10 @@ const tools = [
     {
         category: "Data & Analytics",
         items: [
-            { name: "SQL & Databases", icon: Database, color: "text-emerald-500", bg: "bg-emerald-500/10" },
+            { name: "SQL & Databases", img: "https://skillicons.dev/icons?i=mysql", color: "text-emerald-500", bg: "bg-emerald-500/10" },
             { name: "KPI Tracking", icon: LineChart, color: "text-blue-500", bg: "bg-blue-500/10" },
             { name: "Funnel Analysis", icon: Filter, color: "text-orange-500", bg: "bg-orange-500/10" },
-            { name: "Mixpanel", icon: PieChart, color: "text-violet-500", bg: "bg-violet-500/10" },
+            { name: "Mixpanel", img: "https://cdn.worldvectorlogo.com/logos/mixpanel.svg", color: "text-violet-500", bg: "bg-violet-500/10" },
             { name: "Search Console", icon: Search, color: "text-cyan-500", bg: "bg-cyan-500/10" },
         ]
     },
@@ -33,10 +33,10 @@ const tools = [
         category: "Cloud & Tech",
         items: [
             { name: "APIs & OAuth", icon: Server, color: "text-sky-500", bg: "bg-sky-500/10" },
-            { name: "Oracle Cloud (OCI)", icon: Cloud, color: "text-red-500", bg: "bg-red-500/10" },
+            { name: "Oracle Cloud (OCI)", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg", color: "text-red-500", bg: "bg-red-500/10" },
             { name: "CI/CD Pipelines", icon: Infinity, color: "text-fuchsia-500", bg: "bg-fuchsia-500/10" },
-            { name: "Jira & Confluence", icon: Layout, color: "text-blue-600", bg: "bg-blue-600/10" },
-            { name: "DevOps & GitLab", icon: Github, color: "text-slate-500", bg: "bg-slate-500/10" },
+            { name: "Jira & Confluence", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg", color: "text-blue-600", bg: "bg-blue-600/10" },
+            { name: "DevOps & GitLab", img: "https://skillicons.dev/icons?i=gitlab", color: "text-orange-600", bg: "bg-orange-600/10" },
         ]
     }
 ];
@@ -88,6 +88,8 @@ export default function AnimatedToolset() {
                     >
                         {section.items.map((item) => {
                             const Icon = item.icon;
+                            // @ts-ignore: Next.js tsconfig might complain about dynamic properties without explicit type
+                            const imgUrl = item.img;
                             return (
                                 <motion.div
                                     key={item.name}
@@ -95,8 +97,13 @@ export default function AnimatedToolset() {
                                     whileHover={{ scale: 1.05, x: 5 }}
                                     className="flex items-center gap-3 p-2.5 rounded-2xl hover:bg-foreground/[0.03] transition-colors cursor-default"
                                 >
-                                    <div className={`p-2 rounded-xl ${item.bg}`}>
-                                        <Icon className={`w-5 h-5 ${item.color}`} />
+                                    <div className={`p-2 flex items-center justify-center rounded-xl ${item.bg}`}>
+                                        {imgUrl ? (
+                                            // eslint-disable-next-line @next/next/no-img-element
+                                            <img src={imgUrl} alt={item.name} className="w-5 h-5 object-contain" />
+                                        ) : (
+                                            Icon && <Icon className={`w-5 h-5 ${item.color}`} />
+                                        )}
                                     </div>
                                     <span className="font-medium text-foreground/80 text-sm">{item.name}</span>
                                 </motion.div>
