@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import {
     Map, Lightbulb, Target, GitBranch, Layers, Figma, // Product
-    Database, LineChart, Filter, PieChart, Search, // Data
+    Database, LineChart, Filter, PieChart, Search, Brain, // Data
     Cloud, Server, Infinity, Layout, Github // Tech
 } from "lucide-react";
 
@@ -24,6 +24,7 @@ const tools = [
         items: [
             { name: "SQL & Databases", img: "https://skillicons.dev/icons?i=mysql", color: "text-emerald-500", bg: "bg-emerald-500/10" },
             { name: "KPI Tracking", icon: LineChart, color: "text-blue-500", bg: "bg-blue-500/10" },
+            { name: "Machine Learning", icon: Brain, color: "text-pink-500", bg: "bg-pink-500/10" },
             { name: "Funnel Analysis", icon: Filter, color: "text-orange-500", bg: "bg-orange-500/10" },
             { name: "Mixpanel", img: "https://cdn.worldvectorlogo.com/logos/mixpanel.svg", color: "text-violet-500", bg: "bg-violet-500/10" },
             { name: "Search Console", icon: Search, color: "text-cyan-500", bg: "bg-cyan-500/10" },
