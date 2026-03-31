@@ -175,8 +175,6 @@ export default function Home() {
                 <span className="text-foreground dark:text-gray-300 font-semibold">National Institute of Technology, Meghalaya (NIT Meghalaya)</span>
                 <span>&bull;</span>
                 <span>2019 – 2023</span>
-                <span>&bull;</span>
-                <span className="px-2 py-0.5 rounded-md bg-violet-500/10 text-violet-500 text-xs font-bold">CGPA 7.9</span>
               </div>
               <p className="text-foreground/70 text-sm leading-relaxed max-w-2xl">
                 Developed strong analytical foundations in statistics, data interpretation, and systems thinking. Explored AI/ML fundamentals — including predictive modelling, NLP basics, and data-driven decision frameworks — which now directly inform how I approach product metrics, user behaviour analysis, and AI-powered feature evaluation.
