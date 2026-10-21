@@ -46,7 +46,7 @@ const defaultTools: ToolSection[] = [
             { name: "Oracle Cloud (OCI)", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg", color: "text-red-500", bg: "bg-red-500/10" },
             { name: "CI/CD Pipelines", icon: Infinity, color: "text-fuchsia-500", bg: "bg-fuchsia-500/10" },
             { name: "Git & GitHub", img: "https://skillicons.dev/icons?i=github", color: "text-gray-400", bg: "bg-gray-500/10" },
-            { name: "Linux & Shell", img: "https://skillicons.dev/icons?i=linux", color: "text-amber-600", bg: "bg-amber-600/10" },
+            { name: "GitLab", img: "https://skillicons.dev/icons?i=gitlab", color: "text-orange-500", bg: "bg-orange-500/10" },
         ]
     }
 ];
