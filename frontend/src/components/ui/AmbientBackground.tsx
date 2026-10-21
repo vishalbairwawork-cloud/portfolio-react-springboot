@@ -12,6 +12,15 @@ export default function AmbientBackground() {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+      {/* Developer Grid Matrix */}
+      <div 
+        className="absolute inset-0 opacity-[0.04] dark:opacity-[0.08]"
+        style={{
+          backgroundImage: `radial-gradient(currentColor 1px, transparent 1px)`,
+          backgroundSize: '24px 24px'
+        }}
+      />
+
       <motion.div
         animate={{
           x: [0, 40, -40, 0],
