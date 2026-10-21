@@ -32,7 +32,8 @@ export default function ApiPlayground() {
     setLoading(true);
     const start = performance.now();
     try {
-      const res = await fetch(path);
+      const apiBase = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
+      const res = await fetch(`${apiBase}${path}`);
       const data = await res.json();
       const end = performance.now();
       setResponseTime(Math.round(end - start));

@@ -217,7 +217,8 @@ export function usePortfolioData() {
 
     async function fetchPortfolio() {
       try {
-        const res = await fetch("/api/portfolio");
+        const apiBase = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
+        const res = await fetch(`${apiBase}/api/portfolio`);
         if (res.ok) {
           const json = await res.json();
           if (isMounted) {
