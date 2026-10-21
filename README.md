@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vishal Bairwa Portfolio — React + Java Spring Boot Monorepo
 
-## Getting Started
+A modern full-stack portfolio and CMS application built with **React** (Vite + Tailwind CSS + Framer Motion) and **Java Spring Boot** (Spring Data JPA + H2 In-Memory Database).
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🏗️ Architecture Overview
+
+The repository is structured as a clean, modular Monorepo:
+
+```
+Portfolio/
+├── frontend/                     # React Single Page Application (SPA)
+│   ├── src/
+│   │   ├── components/ui/        # Preserved UI components (Header, FadeIn, AnimatedToolset,
+│   │   │                         # AmbientBackground, ScrollProgress, ThemeToggle, ContactForm)
+│   │   ├── context/              # ThemeContext (Light, Dark, and System mode)
+│   │   ├── hooks/                # usePortfolioData (Spring Boot REST API hook with fallback)
+│   │   ├── App.tsx               # Main portfolio page with dynamic sections
+│   │   └── main.tsx              # React entry point
+│   ├── public/                   # Static logos, favicon, and resume PDF
+│   ├── package.json
+│   └── vite.config.ts            # Vite config with Tailwind v4 & Spring Boot proxy (/api -> :8082)
+│
+├── backend/                      # Java Spring Boot 3 REST API Backend
+│   ├── src/main/java/com/vishalbairwa/portfolio/
+│   │   ├── config/               # CorsConfig & DataInitializer (auto-seeds portfolio data)
+│   │   ├── controller/           # PortfolioController, ContactController, ResumeController
+│   │   ├── dto/                  # PortfolioResponseDto, ContactRequestDto
+│   │   ├── model/                # JPA Entities (Profile, Stat, Experience, Education, CaseStudy, Article, ContactMessage)
+│   │   ├── repository/           # Spring Data JPA Repositories
+│   │   └── PortfolioApplication.java
+│   ├── src/main/resources/
+│   │   ├── application.yml       # Port 8082, H2 in-memory DB & console config
+│   │   └── static/               # Vishal_Bairwa_Product.pdf for download API
+│   ├── pom.xml                   # Maven dependencies
+│   └── mvnw                      # Maven wrapper
+│
+└── package.json                  # Root runner scripts for both frontend and backend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Quick Start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
+- **Node.js** (v18+ recommended)
+- **Java** (JDK 17 or higher)
+- **Maven** (included via `./backend/mvnw`)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### Running Locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can run the backend and frontend independently:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### 1. Start the Spring Boot Backend (Port 8082)
+```bash
+# From repository root:
+npm run dev:backend
 
-## Deploy on Vercel
+# Or directly in backend folder:
+cd backend
+./mvnw spring-boot:run
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### 2. Start the React Frontend (Port 3000)
+```bash
+# From repository root:
+npm run dev:frontend
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Or directly in frontend folder:
+cd frontend
+npm run dev
+```
+
+Visit **[http://localhost:3000](http://localhost:3000)** in your browser.
+
+---
+
+## 🔌 REST API Endpoints
+
+The Spring Boot backend exposes modular endpoints and an aggregated CMS payload:
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/api/portfolio` | Full aggregated portfolio payload (profile, stats, experiences, case studies, articles, education) |
+| `GET` | `/api/profile` | Profile information & headline |
+| `PUT` | `/api/profile` | Update profile information |
+| `GET` | `/api/stats` | Performance and experience metrics |
+| `POST` | `/api/stats` | Add a new stat |
+| `GET` | `/api/experiences` | Timeline of experiences and detailed achievements |
+| `POST` | `/api/experiences` | Add a new experience entry |
+| `GET` | `/api/education` | Education history |
+| `GET` | `/api/case-studies` | Case studies (approach, impact, metrics) |
+| `POST` | `/api/case-studies` | Add a new case study |
+| `GET` | `/api/articles` | Publications & Medium articles |
+| `POST` | `/api/articles` | Add a new article |
+| `POST` | `/api/contact` | Submit contact form inquiry (saved into DB) |
+| `GET` | `/api/contact/messages` | Inspect received contact inquiries |
+| `GET` | `/api/resume` | Download Vishal's product resume PDF |
+
+---
+
+## 🗄️ H2 Database Console
+
+The embedded H2 database console is enabled for easy inspection during development:
+
+- **URL**: `http://localhost:8082/h2-console`
+- **JDBC URL**: `jdbc:h2:mem:portfoliodb`
+- **User Name**: `sa`
+- **Password**: *(leave blank)*
+
+---
+
+## 🧪 Testing
+
+### Backend Integration Tests
+```bash
+npm run test:backend
+# or
+cd backend && ./mvnw test
+```
+
+### Frontend Production Build
+```bash
+npm run build:frontend
+# or
+cd frontend && npm run build
+```
