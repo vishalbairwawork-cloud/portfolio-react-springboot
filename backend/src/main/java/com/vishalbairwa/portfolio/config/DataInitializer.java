@@ -82,7 +82,7 @@ public class DataInitializer implements CommandLineRunner {
             );
             deloitte.addPoint(
                 "API Contract Design, Security & DevOps Automation",
-                "Designed standardized REST API contracts and OAuth2 security protocols; integrated automated unit and integration test suites and partnered with DevOps to streamline deployment pipelines across Azure DevOps and Oracle Cloud (OCI).",
+                "Designed standardized REST API contracts using Postman and OAuth2 security protocols; integrated automated unit and integration test suites and partnered with DevOps to streamline deployment pipelines across Azure DevOps.",
                 "Users"
             );
             experienceRepository.save(deloitte);

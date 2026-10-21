@@ -19,7 +19,7 @@ public class SoftwareEngineerService {
     public ImpactMetric optimizeLatency() {
         return ImpactMetric.builder()
             .platform("Dell 3PP Asset & Pricing Platform")
-            .stack(List.of("Java 17", "Spring Boot", "React", "OCI"))
+            .stack(List.of("Java 17", "Spring Boot", "React", "Postman"))
             .beforeLatency(Duration.ofMinutes(4))
             .afterLatency(Duration.ofSeconds(9))
             .improvement("95% cut in transaction latency")

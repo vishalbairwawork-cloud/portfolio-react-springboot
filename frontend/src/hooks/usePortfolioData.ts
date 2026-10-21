@@ -107,7 +107,7 @@ export const initialPortfolioData: PortfolioData = {
         },
         {
           title: "API Contract Design, Security & DevOps Automation",
-          description: "Designed standardized REST API contracts and OAuth2 security protocols; integrated automated unit and integration test suites and partnered with DevOps to streamline deployment pipelines across Azure DevOps and Oracle Cloud (OCI).",
+          description: "Designed standardized REST API contracts using Postman and OAuth2 security protocols; integrated automated unit and integration test suites and partnered with DevOps to streamline deployment pipelines across Azure DevOps.",
           icon: "Users"
         }
       ]

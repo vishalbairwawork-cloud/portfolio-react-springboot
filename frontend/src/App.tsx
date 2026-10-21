@@ -159,7 +159,7 @@ export default function App() {
                   {/* Tech stack pills */}
                   {exp.company.includes("Deloitte") && (
                     <div className="flex flex-wrap gap-1.5 mb-5">
-                      {["Java 17", "Spring Boot 3", "React 19", "Spring Data JPA", "Oracle Cloud (OCI)", "Azure DevOps", "REST APIs"].map((tech) => (
+                      {["Java 17", "Spring Boot 3", "React 19", "Spring Data JPA", "Postman", "Azure DevOps", "REST APIs"].map((tech) => (
                         <span key={tech} className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-medium bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
                           {tech}
                         </span>

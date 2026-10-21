@@ -43,7 +43,7 @@ const defaultTools: ToolSection[] = [
         items: [
             { name: "Docker", img: "https://skillicons.dev/icons?i=docker", color: "text-sky-600", bg: "bg-sky-600/10" },
             { name: "Azure DevOps", img: "https://skillicons.dev/icons?i=azure", color: "text-blue-500", bg: "bg-blue-500/10" },
-            { name: "Oracle Cloud (OCI)", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg", color: "text-red-500", bg: "bg-red-500/10" },
+            { name: "Postman", img: "https://skillicons.dev/icons?i=postman", color: "text-orange-500", bg: "bg-orange-500/10" },
             { name: "CI/CD Pipelines", icon: Infinity, color: "text-fuchsia-500", bg: "bg-fuchsia-500/10" },
             { name: "Git & GitHub", img: "https://skillicons.dev/icons?i=github", color: "text-gray-400", bg: "bg-gray-500/10" },
             { name: "GitLab", img: "https://skillicons.dev/icons?i=gitlab", color: "text-orange-500", bg: "bg-orange-500/10" },

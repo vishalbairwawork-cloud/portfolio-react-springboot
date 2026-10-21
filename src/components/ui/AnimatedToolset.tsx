@@ -34,7 +34,7 @@ const tools = [
         category: "Cloud & Tech",
         items: [
             { name: "APIs & OAuth", icon: Server, color: "text-sky-500", bg: "bg-sky-500/10" },
-            { name: "Oracle Cloud (OCI)", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg", color: "text-red-500", bg: "bg-red-500/10" },
+            { name: "Postman", img: "https://skillicons.dev/icons?i=postman", color: "text-orange-500", bg: "bg-orange-500/10" },
             { name: "Azure DevOps", img: "https://skillicons.dev/icons?i=azure", color: "text-blue-500", bg: "bg-blue-500/10" },
             { name: "CI/CD Pipelines", icon: Infinity, color: "text-fuchsia-500", bg: "bg-fuchsia-500/10" },
             { name: "Jira & Confluence", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg", color: "text-blue-600", bg: "bg-blue-600/10" },
